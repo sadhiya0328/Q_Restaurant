@@ -1,0 +1,226 @@
+/* ========== GENERAL ========== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+        url('https://thumbs.dreamstime.com/b/aesthetic-brunch-tea-time-macarons-desserts-outside-terrace-natural-herbal-sweet-under-hard-shadows-delicate-sweets-385049072.jpg');
+    /* 🍰 Dessert-style aesthetic background */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333;
+    animation: fadeInBody 1.5s ease-in-out;
+}
+
+/* Subtle fade-in animation */
+@keyframes fadeInBody {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ========== HEADER / NAVBAR ========== */
+header {
+    background: rgba(255, 123, 0, 0.9);
+    color: white;
+    text-align: center;
+    padding: 1.8rem 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(6px);
+    animation: fadeDown 1s ease-in-out;
+}
+
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.4rem;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header p {
+    font-size: 1rem;
+    opacity: 0.95;
+    margin-top: 0.5rem;
+}
+
+/* ========== CONTAINER ========== */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* ========== PAGE TITLE ========== */
+.page-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #222;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(255, 123, 0, 0.3);
+    animation: fadeIn 1.3s ease-in-out;
+}
+
+/* ========== GRID LAYOUT ========== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.8rem;
+    animation: fadeInUp 1.4s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ========== CARD STYLES ========== */
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.4s ease;
+    transform: scale(1);
+    backdrop-filter: blur(8px);
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Image */
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover img {
+    transform: scale(1.08);
+}
+
+/* Info Box */
+.info {
+    padding: 1rem;
+}
+
+.info h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.3rem;
+    color: #222;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.card:hover .info h3 {
+    color: #ff7b00;
+}
+
+.meta {
+    color: #ff7b00;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.desc {
+    color: #555;
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+    min-height: 40px;
+}
+
+.location {
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ff7b00;
+    margin-top: 0.5rem;
+}
+
+/* ========== BUTTON ========== */
+.btn {
+    display: inline-block;
+    margin-top: 0.8rem;
+    background: linear-gradient(90deg, #ff7b00, #ffb347);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 10px rgba(255, 123, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Shiny animation on button hover */
+.btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: left 0.5s ease;
+}
+
+.btn:hover::after {
+    left: 100%;
+}
+
+.btn:hover {
+    background: linear-gradient(90deg, #ff8b1e, #ffc477);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(255, 123, 0, 0.4);
+}
+
+/* ========== BACK BUTTON ========== */
+.back {
+    position: absolute;
+    left: 1rem;
+    top: 1.2rem;
+    background: white;
+    color: #ff7b00;
+    text-decoration: none;
+    padding: 0.4rem 0.9rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.back:hover {
+    background: #ffecd1;
+    transform: scale(1.05);
+}
+
+/* ========== FOOTER ========== */
+footer {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    color: #555;
+    padding: 1rem;
+    border-top: 1px solid #eee;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.05);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Animation helper */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
